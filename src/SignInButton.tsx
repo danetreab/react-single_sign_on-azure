@@ -6,7 +6,7 @@ const SignInButton = () => {
 
   const handleSignIn = async () => {
     try {
-      await instance.loginRedirect(loginRequest);
+      await instance.loginPopup(loginRequest);
     } catch (error) {
       console.log("Sign-in error: ", error);
     }

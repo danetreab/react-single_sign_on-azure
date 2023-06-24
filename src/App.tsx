@@ -12,6 +12,7 @@ function App() {
 
     return (
       <p>
+        <p>To fix spa login Azure-Application-Manifest-line66_change_type-"Spa"</p>
         <p>Anyone can see this paragraph.</p>
         {isAuthenticated && (
           <p>At least one account is signed in!</p>
@@ -26,7 +27,7 @@ function App() {
   return (
     <>
       <SignInButton />
-      <UserInfo/>
+      { isAuthenticated && <UserInfo/>}
       {isLogin()}
       <LogoutButton/>
     </>

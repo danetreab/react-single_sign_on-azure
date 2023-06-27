@@ -5,8 +5,12 @@ import SignInButton from './SignInButton'
 import UserInfo from './UserInfo'
 import { useIsAuthenticated } from '@azure/msal-react'
 import LogoutButton from './LogOutButton'
+import QRScanner from './QRScanner'
+
 
 function App() {
+
+  
   const isAuthenticated = useIsAuthenticated();
   const isLogin = () => {
 
@@ -25,15 +29,18 @@ function App() {
   }
 
   return (
+    // <>
+    //   <SignInButton />
+    //   { isAuthenticated && <UserInfo/>}
+    //   {isLogin()}
+    //   <LogoutButton/>
+    // </>
+    // <>
+    //   <WebcamCapture/>
+    // </>
     <>
-      <SignInButton />
-      { isAuthenticated && <UserInfo/>}
-      {isLogin()}
-      <LogoutButton/>
+      <QRScanner/>
     </>
-    // <AuthProvider>
-
-    // </AuthProvider>
   )
 }
 
